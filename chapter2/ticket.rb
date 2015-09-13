@@ -30,3 +30,9 @@ print "The seat is "
 print ticket.seat + ", "
 print "and it costs $"
 puts "%.2f." % ticket.price
+
+
+puts "\nThis ticket is for: #{ticket.event}, at #{ticket.venue}." +
+  "The performer is #{ticket.performer}." +
+  "The seat is #{ticket.seat}, " +
+  "and its costs $#{"%.2f." % ticket.price}"

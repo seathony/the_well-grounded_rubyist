@@ -5,7 +5,6 @@ obj = Object.new
 # end
 # obj.one_arg(1,2,3)
 ################################################
-
 #### Required and optional arguments ##########
 def obj.multi_args(*x)
   puts "I can take zero or more arguments!"
@@ -29,3 +28,23 @@ end
 
 default_args(3,2)
 default_args(4,5,6)
+#############################################
+#### Order of parameters and arguments #####
+def mixed_args(a,b,*c,d)
+  puts "\nArguments:"
+  p a,b,c,d
+end
+
+mixed_args(1,2,3,4,5)
+mixed_args(1,2,3)
+
+def arg_unleashed(a,b=1,*c,d,e)
+  puts "\nArguments unleased:"
+  p a,b,c,d,e
+end
+
+arg_unleashed(1,2,3,4,5)
+arg_unleashed(1,2,3,4)
+arg_unleashed(1,2,3)
+arg_unleashed(1,2,3,4,5,6,7,8)
+# arg_unleashed(1,2) wrong number of args (2 for 3+)

@@ -49,5 +49,5 @@ arg_unleashed(1,2,3)
 arg_unleashed(1,2,3,4,5,6,7,8)
 # arg_unleashed(1,2) wrong number of args (2 for 3+)
 #### What you cant do #########################
-def broken_args(x,*y,z=1)
-end
+# def broken_args(x,*y,z=1)
+# end
